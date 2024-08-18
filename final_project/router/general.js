@@ -7,6 +7,7 @@ const public_users = express.Router();
 // register a new user
 public_users.post("/register", (req, res) => {
     const { username, password } = req.body;
+    
     if (!username || !password) {
         return res.status(400).send({ message: "Username and password are required" });
     }
